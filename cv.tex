@@ -1,0 +1,160 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx} 
+\usepackage{enumitem}
+\geometry{margin=1in}
+\setlength{\parskip}{0.3em}
+\setlength{\parindent}{0em}
+\pagestyle{empty}
+
+% Disable extra spacing in itemize/enumerate
+\setlist{nosep}
+
+\begin{document}
+	
+	\begin{center}
+		{\textbf{\Huge X\huge INGYU \Huge M\huge U}} \\[0.3em]
+		(929) 494-8412 $\cdot$ xm2204@nyu.edu $\cdot$ \href{https://github.com/Heterohabilis}{github.com/Heterohabilis} $\cdot$ \href{https://linkedin.com/in/xyum}{linkedin.com/in/xyum}
+	\end{center}
+	
+	\section*{EDUCATION}
+        \hrule
+        \textbf{New York University, Tandon School of Engineering} \hfill Graduated: May 2025\\
+        \textit{B.S. in Computer Science, Minor in Electrical Engineering, summa cum laude} \\
+        \textbf{GPA:} 3.986 / 4.0 — Highest GPA in the department\\
+        \textbf{Program Highlight:} Accelerated 4.5-year track with graduate-level coursework already in progress\\
+        \textbf{Awards:}
+        \begin{itemize}[leftmargin=*]
+            \item \textit{Pearl Brownstein Senior Award} — Awarded to the graduating senior with the highest GPA in the Computer Science and Engineering department. (May 2025)
+        \end{itemize}
+        \textbf{Relevant Coursework:} \\
+        \textit{CS and EE:} Data Structures and Algorithms, Object Oriented Programming, Computer Architecture, Algorithm Analysis, Fundamentals of Electric Circuits, Introduction to Machine Learning, Operating Systems, Java and Web Programming, Database, Software Engineering and Project Management, Signal and System, Digital Logic, Computer Networking, Electronics I: Analog Circuits, Open Source/Professional Software Development\\
+        \textit{Math:} Calculus, Data Analysis and Probability, Discrete Mathematics, Linear Algebra and Differential Equations\\
+        \textbf{Self-Directed Learning:} CS25: Transformers United — In-depth study of Transformer architectures, attention mechanisms, pretraining techniques, and applications in LLM systems \\
+        \textbf{Affiliations:} Data Analytics Visualization Group @ NYU Tandon, Research Assistant @ NYU AI4ce Lab \\
+    
+        \textbf{New York University, Tandon School of Engineering} \hfill Expected Graduation: May 2027 \\
+        \textit{M.S. in Computer Science} \\
+        \textbf{GPA}: 3.961/4.0 \\
+        \textbf{Relevant Coursework:} \\
+        \textit{CS:} Deep Learning, Artificial Intelligence, Compiler and Programming Languages, Embodied Learning \& Vision, Big Data, Searched Based Software Engineering, Information Security and Privacy \\
+
+	
+\section*{EXPERIENCE}
+\hrule
+
+\textbf{Software Engineering Intern, Data Platform \& Infrastructure} \hfill May 2026 – Aug. 2026\\
+ByteDance Ltd.
+\begin{itemize}
+  \item Built end-to-end observability for a Kafka--Flink--Paimon data-lake ingestion pipeline: instrumented consumer lag, checkpoint duration, and per-record freshness in Flink, and designed an E2E freshness probe quantifying p50/p95/p99 latency against SLO targets with dashboards and alerting
+  \item Drove the storage migration of a petabyte-scale log search and analytics platform behind unchanged APIs: authored field-mapping specs (16/30-column unified schema), built a shadow-comparison harness producing automated diff reports, and rewrote the query backend from cached reads to direct queries with multi-topic routing
+  \item Designed and validated a dual-layer authorization model for multi-tenant data-lake access --- business-level checks plus cloud-level IAM enforcement via STS-issued least-privilege temporary credentials --- through POCs on serverless Spark identity override and table-granularity object-storage policies
+  \item Shipped user-facing Paimon data-lake APIs and a companion CLI, defining its agent-native output contract (machine-readable command schema, structured error envelopes, enumerated exit codes) as the frozen interface consumed by downstream AI-agent skills, and authored the published skill suite built on it
+  \item Proposed a Paimon-side audit-logging and SQL lineage-tracking scheme, and migrated production algorithm operators onto STS-based data-lake access
+  \item Diagnosed sandbox-scheduling queue backlog in a crowdtesting platform and contributed schema design for its result tables
+\end{itemize}
+
+\textbf{Applied Machine Learning Software Engineering Intern} \hfill May 2025 – Aug. 2025\\
+ByteDance Ltd.
+\begin{itemize}
+  \item Re-architected an LLM training pipeline into an explicit state machine with parallelized API-bound stages and cache-aware incremental processing across chunking, summarization, embeddings, clustering, and ``shade'' generation (persisted in ChromaDB), enabling resumable training, faster recovery, and higher throughput
+  \item Diagnosed and fixed a clustering metric mismatch (cosine thresholds vs.\ Euclidean distances), restoring meaningful clusters and cutting shade count and generation cost
+  \item Isolated per-user runtime by containerizing data/config/artifacts into separate per-task processes; hardened generation with retry logic, plain-text handling, and per-user YAML language config
+  \item Built an end-to-end evaluation pipeline that auto-generates distribution-preserving QA sets ($\leq$ 2{,}000 per type), runs the evaluatee with L0/L1 retrieval, and scores via 4-judge majority vote on helpfulness, correctness, empathy, and completeness
+  \item Delivered flexible training paths (data cleaning only, +SFT, +SFT + DPO) coordinated by a feedback-aware scheduling agent, with chat-driven parameter setup for creators with minimal LLM experience
+  \item Shipped two serving modes --- 1-to-1 ``author chat'' and k-author group sessions with tag-based similarity auto-matching --- supporting author-configurable system prompts, LLM-driven post-session insight extraction, and multi-version serving over any baseline
+\end{itemize}
+
+\textbf{Teaching Assistant, CS-UY 3224: Operating Systems} \hfill Sep. 2024 – Present\\
+New York University, Tandon School of Engineering
+\begin{itemize}[leftmargin=*]
+	\item Grade weekly assignments and exams for 150+ students in one of NYU’s largest systems courses
+	\item Host weekly office hours (1–2 hrs) to assist students with C, x86 assembly, concurrency, and memory management
+	\item Compile weekly FAQ reports to streamline professor-student communication and clarify common pain points
+\end{itemize}
+
+\textbf{Software Engineering Intern} \hfill Jul. 2023 – Aug. 2023\\
+CVIC Software Engineering Co., Ltd.
+\begin{itemize}[leftmargin=*]
+	\item Built camera driver modules for highway plate recognition and automated tolling; deployed to 30+ locations
+	\item Reduced billing latency by ~25\% through algorithm and data structure optimization
+	\item Designed user-friendly GUI using C++/Qt, improving operator efficiency and accessibility
+\end{itemize}
+
+%\textbf{AP CS A Course Staff} \hfill Jun. 2022 – %Aug. 2022\\
+%New Oriental Education Group Inc.
+%\begin{itemize}[leftmargin=*]
+%	\item Supported 30+ high school students in mastering core Java OOP concepts and College Board exam content
+%	\item Reviewed, graded, and explained assignments to reinforce logic and debugging skills
+%\end{itemize}
+
+\section*{LEADERSHIP \& PROJECTS}
+\hrule
+
+\textbf{Lazy Terminal (MCP + Coagent)} \hfill Spring 2025 – Present  
+\begin{itemize}[leftmargin=*]
+    \item Developed a GPT-style AI assistant that dynamically chooses between generating direct responses and invoking external tools via the Model Context Protocol (MCP)
+    \item Built a universal MCP client supporting both HTTP and STDIO transports, with manifest-based tool discovery and intelligent routing
+    \item Implemented a Bash-executing MCP server that interprets natural language input into multi-line shell scripts and executes them securely
+    \item Integrated LLMs such as GPT and DeepSeek to handle tool-oriented reasoning, response reflection, and result summarization
+    \item Created a lightweight terminal UI using Lovable, streamlining user interaction with agent capabilities
+
+\end{itemize}
+
+
+\textbf{VOC Leakage Detection Robot Developer @ NYU UGSRP} \hfill Summer 2024 – Present
+\begin{itemize}[leftmargin=*]
+	\item Designed and built a Jetson Orin Nano-based robot to detect volatile organic compound (VOC) leaks
+	\item Trained CNNs (ResNet-18, AlexNet) on air concentration plots to estimate leak proximity with 90–95\% accuracy
+	\item Simulated ethanol leaks using SGP-40 gas sensors; conducted experiments in biosafety level-2 lab
+	\item Proposed hardware and sensor elevation improvements to optimize airflow sampling
+\end{itemize}
+
+\textbf{MapNYC Project @ NYU AI4ce Lab} \hfill Spring 2024 – Spring 2025  
+\begin{itemize}[leftmargin=*]
+    \item Collected large-scale multimodal street data across Manhattan using synchronized LiDAR and stereo camera systems
+    \item Remotely monitored edge devices via SSH, diagnosing and resolving data loss and timing issues to maximize collection uptime
+    \item Processed sensor streams into 3D point clouds through a custom ROS-based data integration pipeline
+\end{itemize}
+
+
+\textbf{E20 Processor \& Cache Simulator} \hfill Fall 2023
+\begin{itemize}[leftmargin=*]
+	\item Built E20 pipelined processor and two-level cache simulator in C++
+	\item Implemented both write-back and write-through cache policies; validated with ISA compliance tests
+\end{itemize}
+
+\textbf{Data Analytics Visualization VIP @ NYU Tandon} \hfill Fall 2023 – Winter 2023
+\begin{itemize}[leftmargin=*]
+	\item Visualized multi-source datasets using Google BigQuery and Looker Studio dashboards
+	\item Developed an automated Mars image fetcher using NASA and SendGrid APIs for weekly mailing
+\end{itemize}
+
+%\textbf{Distributed Query Engine “Quokka” %Contributor} \hfill Summer 2023 – Present
+%\begin{itemize}[leftmargin=*]
+%	\item Explored S3-compatible nearest neighbor %indexing via DiskANN (Vamana) for large-scale %joins
+%	\item Developed online variant of DiskANN to %support streaming data workloads
+%\end{itemize}
+
+\textbf{Voice Recognition Appliance Project} \hfill Jun. 2021 – Jul. 2021  
+\begin{itemize}[leftmargin=*]
+    \item Developed a voice-controlled smart dryer by integrating Baidu Speech Recognition API with a C-programmed microcontroller and IR/temperature sensors
+    \item Filed and obtained a utility patent in China for the embedded control system and voice-activated workflow
+\end{itemize}
+
+
+	
+	\section*{SKILLS}
+	\hrule
+	
+    \textbf{Programming Languages:} Python, Java, C, C++, C\#, MySQL, Verilog, Rust, CUDA, MATLAB, x86-64 Assembly, JavaScript/React, Prolog, Lisp/Scheme, PHP\\
+    \textbf{ML/Data:} NumPy, Pandas, TensorFlow, PyTorch, BigQuery, Looker Studio, Google Cloud (GCP), DigitalOcean, Coagent, Vector databases, Retrieval-Augmented Generation (RAG), Transformers/LLM fundamentals, LoRA/QLoRA fine-tuning, DPO, Reinforcement-learning-based alignment (PPO, GRPO), Prompt engineering, In-context learning, Deep learning, Transfer learning, Ollama, Mem0, Vibe Coding\\
+    \textbf{Tools/Systems:} Git, Linux, Docker, Figma, VS Code, Shell, \LaTeX, Markdown, ROS/ROS 2, GDB, Vivado, Jupyter, Lovable, Cursor\\
+    \textbf{Hardware/Robotics:} Jetson Orin Nano, Jetson Bot, Arduino, Raspberry Pi\\
+    \textbf{Languages:} English, Chinese\\
+    \textbf{Hobbies \& Interests:} Historical linguistics, gym, hiking, reading
+    	
+\end{document}
